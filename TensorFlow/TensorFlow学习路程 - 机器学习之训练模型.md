@@ -1,4 +1,4 @@
-## TensorFlow学习路程 - 机器学习之训练模型 ##
+## TensorFlow学习路程 - 机器学习之训练模型 [【上页】](https://tinyworker.github.io/TensorFlow/index) ##
 ### 泛化（Generalization）###
 泛化指的是模型经过训练后向新数据衍生的行为。在泛化过程中，若模型与训练集数据紧密联系，但在泛化到新数据的预测结果很糟糕，那么就认为模型过拟合。
 
