@@ -6,5 +6,5 @@
 ### [计算机网络](https://tinyworker.github.io/Network/index.md) ###
 学习计算机网络课程的笔记记录
 
-### [工作难点笔记](https://tinyworker.github.io/WorkPoint/index.md) ###
+### [工作难点笔记](https://tinyworker.github.io/WorkPoint/index) ###
 记录了工作中遇到的技术难点或亮点场景解决方案等内容。
