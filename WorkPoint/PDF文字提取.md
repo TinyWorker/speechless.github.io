@@ -1,4 +1,4 @@
-## PDF文字提取功能调研[上页](https://tinyworker.github.io/WorkPoint/index)
+## PDF文字提取功能调研[【上页】](https://tinyworker.github.io/WorkPoint/index)
 POC目标：对PDF文件实现文本提取
 
 问题场景：PDF存储文本分两种情况，一种是直接文本，一种是图片内文本。
