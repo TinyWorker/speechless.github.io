@@ -11,3 +11,6 @@
 
 ### [表示](https://tinyworker.github.io/TensorFlow/TensorFlow学习路程 - 机器学习之表示) ###
 机器学习的数据源处理，如何转换数据源为可计算特征。
+
+### [逻辑回归与分类](https://tinyworker.github.io/TensorFlow/TensorFlow学习过程 - 机器学习之逻辑回归与分类) ###
+机器学习的逻辑回归简介。

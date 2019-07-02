@@ -50,3 +50,78 @@
 在训练集和测试集的基础上，再划分一个区间，验证集，验证集用来替代原测试集的作用来调整模型，得到最佳效果的模型后才会在测试集上确认，能更大程度的减少测试集曝光程度。
 
 数据失效后，更好的当然是收集更多数据来刷新数据集，但某些场景中重新开始也是种很好的重置方式。
+
+### 特征组合 ###
+之前的学习里，我们使用的特征都是简单的，单一的，可以用线性规律来解释的，但是，真实场景下，也很多特征是无法用线性规律去解释，是非线性问题，这个时候，我们就会创建特征组合（Feature Crosses）。
+
+特征组合可以有很多种类，比如：
+
+- 【A X B】：两个特征的乘形成的组合。
+- 【A X B X C X D X E】：五个特征的乘形成的组合。
+- 【A X A】：单个特征的平方形成的组合。
+
+完成了特征组合后，使用**随机梯度下降法**，能有效**训练线性模型**。
+
+在特征组合中，我们常常会组合独热矢量，将其组合视为逻辑连接，比如国家与语言的关系，组合后的特征更具有解读性。
+
+### 正则化（Regularization for Simplicity） ###
+之前提到了过拟合，是由于模型复杂度过高导致测试集合的损失较大。那么，**我们降低复杂度来防止过拟合的过程，称为正则化**。
+
+也就是说，不以最小化损失为目标，而是以最小化损失和复杂度为目标，称为**结构风险最小化**。因此，在训练优化算法中就包含两项内容：一个是**损失项**，用于衡量模型与数据的拟合度，一个是**正则化项**，用于衡量模型复杂度。
+
+使用L2正则化公式来量化复杂度，此公式将正则化项定义为所有特征权重的平方和，这是将模型复杂度作为模型中所有特征的权重的函数。
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>L</mi>
+    <mn>2</mn>
+  </msub>
+  <mtext>&#xA0;regularization term</mtext>
+  <mo>=</mo>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi mathvariant="bold-italic">w</mi>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msubsup>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mn>2</mn>
+    <mn>2</mn>
+  </msubsup>
+  <mo>=</mo>
+  <mrow class="MJX-TeXAtom-ORD">
+    <msubsup>
+      <mi>w</mi>
+      <mn>1</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <msubsup>
+      <mi>w</mi>
+      <mn>2</mn>
+      <mn>2</mn>
+    </msubsup>
+    <mo>+</mo>
+    <mo>.</mo>
+    <mo>.</mo>
+    <mo>.</mo>
+    <mo>+</mo>
+    <msubsup>
+      <mi>w</mi>
+      <mi>n</mi>
+      <mn>2</mn>
+    </msubsup>
+  </mrow>
+</math>
+可以看到此公式中，接近于0的权重对模型复杂度几乎没有影响，但离群值权重则可能产生巨大影响。
+
+### lambda - 正则化率 ###
+在正则化的计算中，我们会将正则化项的值乘以标量，目的是增加正则化效果，在L2正则化后，模型权重值接近于0，且平均值接近于0，呈正态分布。
+
+在选择lambda值时，目标是在简单化和训练数据拟合间找到平衡。如果lambda值过高，则模型会很简单，但会有欠拟合的风险，可能训练集效果不理想；如果lambda值过低，则模型会比较复杂，会有过拟合的风险，可能有无法泛化的问题。
