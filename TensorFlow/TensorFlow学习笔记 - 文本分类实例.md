@@ -5,6 +5,7 @@
 我们会将文本形式的影评内容分为“正面”和“负面”，即二元分类。使用的集合来自于IMDB数据集，包含来自互联网的5w条影评文本，并将其拆分成1:1的训练集与测试集。
 
 使用的是高阶API-keras，在TensorFlow中用于构建和训练模型。
+	
 	import tensorflow as tf
 	from tensorflow import keras
 	
@@ -48,8 +49,8 @@
 ### 步骤四：填充数据
 数组必须转换为张量后，才能发送到神经网络中。有两种方法能够实现这种转换： 
 
-- 对数组进行独热编码，将其转换为0和1构成的向量。比如将序列转换为N维向量，除序列对应索引为1，其余均为0，并作为网络第一层（密集层）。但这种方法会占据大量内存，需要大小为num_words * num_reviews的矩阵。
-- 对数组进行填充，使其具有相同的长度，创建形状为max_length*num_reviews的整数张量，并使用能处理该形状的嵌入层作为网络中的第一层。
+- 对数组进行独热编码，将其转换为0和1构成的向量。比如将序列转换为N维向量，除序列对应索引为1，其余均为0，并作为网络第一层（密集层）。但这种方法会占据大量内存，需要大小为num_words \* num_reviews的矩阵。
+- 对数组进行填充，使其具有相同的长度，创建形状为max_length\*num_reviews的整数张量，并使用能处理该形状的嵌入层作为网络中的第一层。
 代码如下：
 
 		train_data = keras.preprocessing.sequence.pad_sequences(train_data,
@@ -77,7 +78,7 @@
 
 	# input shape is the vocabulary count used for the movie reviews (10,000 words)
 	vocab_size = 10000
-	#四层构建，第一层为嵌入层，第二层，第三次为密集层，使用ReLU，第四层隐藏层（密集层），使用sigmoid算法做分类
+	
 	model = keras.Sequential()
 	model.add(keras.layers.Embedding(vocab_size, 16))
 	model.add(keras.layers.GlobalAveragePooling1D())
