@@ -1,6 +1,6 @@
 ## TensorFlow学习笔记[【首页】](https://tinyworker.github.io)
 
-### [机器学习概念](https://tinyworker.github.io/TensorFlow/TensorFlow学习进程 - 机器学习概念) ###
+### [机器学习概念](https://tinyworker.github.io/TensorFlow/TensorFlow学习路程 - 机器学习概念) ###
 机器学习中的术语和框架概念。
 
 ### [降低损失](https://tinyworker.github.io/TensorFlow/TensorFlow学习路程 - 机器学习之降低损失) ###
@@ -12,5 +12,9 @@
 ### [表示](https://tinyworker.github.io/TensorFlow/TensorFlow学习路程 - 机器学习之表示) ###
 机器学习的数据源处理，如何转换数据源为可计算特征。
 
-### [逻辑回归与分类](https://tinyworker.github.io/TensorFlow/TensorFlow学习过程 - 机器学习之逻辑回归) ###
+### [逻辑回归与分类](https://tinyworker.github.io/TensorFlow/TensorFlow学习路程 - 机器学习之逻辑回归) ###
 机器学习的逻辑回归简介。
+
+
+### [文本分类实例](https://tinyworker.github.io/TensorFlow/TensorFlow学习笔记 - 文本分类实例)
+TensorFlow的影评文本分类实例
