@@ -17,4 +17,7 @@
 
 
 ### [文本分类实例](https://tinyworker.github.io/TensorFlow/TensorFlow学习笔记 - 文本分类实例)
-TensorFlow的影评文本分类实例
+TensorFlow的影评文本分类问题实例
+
+### [回归问题实例](https://tinyworker.github.io/TensorFlow/TensorFlow学习笔记 - 回归，预测燃料效率)
+TensorFlow的回归问题实例

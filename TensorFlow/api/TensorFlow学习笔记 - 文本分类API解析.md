@@ -1,4 +1,4 @@
-## TensorFlow学习笔记 —— 文本分类API解析 ##
+## TensorFlow学习笔记 —— 文本分类API解析 [【上页】](https://tinyworker.github.io/TensorFlow/index)  ##
 在高阶API-keras中，自带有一部分预处理好的数据集合，通过datasets包进行调用，本实例中使用的是imdb数据集。
 其他的数据集包括：
 
@@ -65,16 +65,43 @@
 
 ### Training - 训练模型
 在上面的操作完成后，就可以开始训练模型了，使用model.fit()开始对模型的训练及追踪。参数如下：
-x，输入数据集
-y，目标数据集
-batch_size，批量训练的数量，默认32
-epochs，训练周期，表示完整遍历一遍x，y的数据。
-verbose，0/1/2，详细模式，0是静默，1是进度条，2是每个周期一行。通常建议选择2。
-validation_data，用于每个周期结束时评估损失和模型指标的。该部分数据不会用作训练。
+
+- x，输入数据集
+- y，目标数据集
+- batch_size，批量训练的数量，默认32
+- epochs，训练周期，表示完整遍历一遍x，y的数据。
+- verbose，0/1/2，详细模式，0是静默，1是进度条，2是每个周期一行。通常建议选择2。
+- validation_data，用于每个周期结束时评估损失和模型指标的。该部分数据不会用作训练。
 
 fit方法会在完成后返回一个history对象，该对象内部记录了每个周期训练的结果，可以用来生成图表以便于观察过程。
 
 ### 附录
+
+优化器列表：
+
+- Adadelta，算法实现，随机梯度下降原理，基于每个维度的自适应学习速率来解决两个缺点：
+	1. 在训练过程中持续的学习速率下降。
+	2. 需要手动选择的全局学习速率。
+	
+	有两个累积步骤：
+	1. 梯度的累积平方。
+	2. 更新的累积平方。
+	 
+	算法的初始化步骤详见[链接](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Adadelta#initialization)，具体分析后续出专题文章。
+- Adagrad，参数指定的学习速率，根据参数在训练期间的更新频率来调整，接收到的更新越多，更新幅度越小。
+
+	算法的初始化步骤详见[链接](https://tensorflow.google.cn/api_docs/python/tf/keras/optimizers/Adagrad#initialization)，具体分析后续出专题文章。
+- Adam，随机梯度下降原理，基于一阶和二阶矩阵的自适应预估。算法特点有：计算效率，有少量内存要求，对对角梯度重新缩放的不变性，以及对大量数据/参数问题的良好适应性。
+- Adamax，基于无限规范的Adam算法变体。有时候作为Adam的监督，特别是在嵌入式模型中。
+- Ftrl，详见论文，提供在线L2及缩减类L2算法支持。
+- Nadam，和Adam类似，Adam是动量RMSprop，Nadam是动量Nesterov。
+- RMSprop，详见论文。
+- SGD，随机梯度下降和动量优化器。
+- Optimizer，是优化器的基础类，所有算法类优化器均基于此类扩展。
+
+
+损失函数列表：
+数量过多，优先级滞后，后续补充。
 
 ### 实例完整代码
 	import tensorflow as tf
