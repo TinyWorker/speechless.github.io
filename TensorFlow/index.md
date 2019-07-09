@@ -1,23 +1,22 @@
-## TensorFlow学习笔记[【首页】](https://tinyworker.github.io)
+## 机器学习&深度学习 [【首页】](https://tinyworker.github.io)
 
-### [机器学习概念](https://tinyworker.github.io/TensorFlow/TensorFlow学习路程 - 机器学习概念) ###
-机器学习中的术语和框架概念。
+### [机器学习篇](https://tinyworker.github.io/TensorFlow/ML/index) ###
+机器学习中的术语和各种概念。
 
-### [降低损失](https://tinyworker.github.io/TensorFlow/TensorFlow学习路程 - 机器学习之降低损失) ###
-机器学习的方法和基本思路，如何更快的得到优解。
+### [TensorFlow - 基础篇](https://tinyworker.github.io/TensorFlow/tensorflow_use/index) ###
+TensorFlow的基础使用及样例，展示的是构建机器学习的步骤。
 
-### [训练模型](https://tinyworker.github.io/TensorFlow/TensorFlow学习路程 - 机器学习之训练模型) ###
-机器学习的训练数据源，如何划分能更好的促进模型结果。
+### [TensorFlow - Eager](https://tinyworker.github.io/TensorFlow/) ###
+Eager Execution API的教程，展示API对ML的应用。
 
-### [表示](https://tinyworker.github.io/TensorFlow/TensorFlow学习路程 - 机器学习之表示) ###
-机器学习的数据源处理，如何转换数据源为可计算特征。
+### [TensorFlow - Estimators](https://tinyworker.github.io/TensorFlow/) ###
+Estimators API教程，是针对高级模型的构建教程。
 
-### [逻辑回归与分类](https://tinyworker.github.io/TensorFlow/TensorFlow学习路程 - 机器学习之逻辑回归) ###
-机器学习的逻辑回归简介。
+### [TensorFlow - 分布式篇](https://tinyworker.github.io/) ###
+TensorFlow的分布式训练应用。
 
+### [TensorFlow - 图像篇](https://tinyworker.github.io/TensorFlow/)
+TensorFlow对图像的模型应用。
 
-### [文本分类实例](https://tinyworker.github.io/TensorFlow/TensorFlow学习笔记 - 文本分类实例)
-TensorFlow的影评文本分类问题实例
-
-### [回归问题实例](https://tinyworker.github.io/TensorFlow/TensorFlow学习笔记 - 回归，预测燃料效率)
-TensorFlow的回归问题实例
+### [TensorFlow - 文本/序列篇](https://tinyworker.github.io/TensorFlow/)
+TensorFlow对序列的模型应用。
