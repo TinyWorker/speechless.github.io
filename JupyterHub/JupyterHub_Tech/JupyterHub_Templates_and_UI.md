@@ -31,5 +31,5 @@ Jinja具有扩展模板的机制。基础模板定义为一个block，子模板�
 
 同时在扩展页面上也可以生效，并且不需要重启。但注意扩展页面优先。
 
-	{% extends "templates/login.html" %}
-	{% set announcement = 'some message' %}
+	{ extends "templates/login.html" }
+	{ set announcement = 'some message' }
