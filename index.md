@@ -3,6 +3,9 @@
 ### [机器学习](https://tinyworker.github.io/TensorFlow/index) ###
 学习TensorFlow的过程笔记，包括机器学习的基础概念，TensorFlow的框架使用，部分算法的理解等。
 
+### [JupyterHub](https://tinyworker.github.io/JupyterHub/index) ###
+学习JupyterHub的笔记，包括基本机制和技术文档，部署记录等。
+
 ### [计算机网络](https://tinyworker.github.io/Network/index) ###
 学习计算机网络课程的笔记记录
 
