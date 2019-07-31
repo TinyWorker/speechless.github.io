@@ -21,7 +21,7 @@ JupyterHub的结构及基本信息
 ### [JupyterHub的REST API](http://tinyworker.github.io/JupyterHub/JupyterHub_Tech/JupyterHub_REST_API)
 JupyterHub的结构及基本信息
 
-### [JupyterHub的模板和UI](http://tinyworker.github.io/JupyterHub/JupyterHub_Tech/JupyterHub_Templates&UI)
+### [JupyterHub的模板和UI](http://tinyworker.github.io/JupyterHub/JupyterHub_Tech/JupyterHub_Templates_and_UI)
 JupyterHub的结构及基本信息
 
 ### [JupyterHub配置用户环境](http://tinyworker.github.io/JupyterHub/JupyterHub_Tech/JupyterHub_Configuring_User_Environment)
