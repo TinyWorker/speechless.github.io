@@ -7,31 +7,36 @@ CentOS下使用yum指令进行基础环境的安装。
 
 1. 下载python的源码包
 
-
     wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
 
 2. 解压并使用config脚本来生成makefile文件，为安装准备
 
 	tar -zxvf Python-3.7.4.tgz
 
-3. 完成解压后，进入解压目录
+3. 安装前执行下列指令，保证依赖服务可用
+
+	yum groupinstall "Development Tools"
+
+	yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
+
+4. 完成解压后，进入解压目录
 
 	 ./configure --prefix=/usr/local/python3
 
-3. make指令进行安装
+5. make指令进行安装
 
 	make && make install
 
-4. 完成后建立软链并添加环境变量，PATH中添加路径/usr/local/python3/bin
+6. 完成后建立软链并添加环境变量，PATH中添加路径/usr/local/python3/bin
 
 	 ln -s /usr/local/python3/bin/python3 /usr/bin/python3
 
-	vim ~/.bash_profile
+	vim vim ~/.bash_profile
 
-5. 上述完成后可输入指令查看python版本，可以看到python安装完成后会连pip3以及setuptool一起安装
+7. 上述完成后可输入指令查看python版本，可以看到python安装完成后会连pip3以及setuptool一起安装
 
 
-相关安装过程的错误解决：
+相关安装过程的错误解决：解决方案为安装步骤第三步
 
 错误1，configure指令出现没有C compiler错误，需要执行指令安装linux的基础开发工具。
 
@@ -128,4 +133,6 @@ hub成功启动，单用户登录成功并启动notebook成功，这里记录下
 
 若spawner生成有异常（有找不到路径，无权限的问题），会提示启动失败，或者有可能进入死循环（重定向循环，这个仅触发一次，原因未知）。
 
+若需要使用第三方验证器OAuth，需要安装oauthenticator
 
+	pip3 install oauthenticator

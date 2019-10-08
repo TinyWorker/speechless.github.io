@@ -44,16 +44,16 @@
 
 在根证书服务器上，生成私钥及证书
 
-	(umask 077; openssl genrsa -out test.key 2048)
-	openssl req -new -key test.key -out test.csr -days 365
+	(umask 077; openssl genrsa -out my.key 2048)
+	openssl req -new -key my.key -out my.csr -days 365
 
 接着颁发证书
 
-	openssl ca -in /path/to/test.csr -out /path/to/test.crt -days 365
+	openssl ca -in /path/to/my.csr -out /path/to/my.cert -days 365
 
 会得到一系列信息，若证书信息正确就直接确认通过即可。完成后检查证书信息
 
-	openssl x509 -in /path/to/test.crt -noout -serial -subject
+	openssl x509 -in /path/to/my.crt -noout -serial -subject
 
 至此，CA认证步骤完成。
 
