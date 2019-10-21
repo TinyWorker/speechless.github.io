@@ -454,6 +454,7 @@ Streaming data中可以使用DataFrames和SQL操作，必须要基于StreamingCo
 - 当程序第一次启动，会创建新的StreamingContext，设置所有的流并调用start()；
 - 当程序从失败中重启，会从检查点数据中重新创建StreamingContext。
 
+示例如下：
 
 	def functionToCreateContext(): StreamingContext = {
 	  val ssc = new StreamingContext(...)   // new context
